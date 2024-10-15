@@ -10,12 +10,12 @@
       type="image/x-icon"
     />
     <title>追風者-最新消息</title>
-    <script type="module" crossorigin src="/Project-FilmNest/assets/main-90cb0111.js"></script>
-    <link rel="stylesheet" href="/Project-FilmNest/assets/main-55193a24.css">
+    <script type="module" crossorigin src="/Project-FilmNest/assets/main-699e2fff.js"></script>
+    <link rel="stylesheet" href="/Project-FilmNest/assets/main-a811458b.css">
   </head>
   <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 py-lg-5 fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbarFix py-3 py-lg-5 fixed-top">
   <div class="container">
     <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -48,6 +48,22 @@
     </div>
   </div>
 </nav>
+
+<script>
+  function scroll() {
+    var top = $(".navbar").offset().top; //獲取navbar變色的位置距頂部的高度
+    var scrollTop = $(window).scrollTop(); //獲取當前窗口距頂部的高度
+    if (scrollTop <= top) {
+      $(".bg-navbarFix").css("background-color","transparent")
+    }
+    else {
+      $(".bg-navbarFix").css("background-color","#040404")
+    }
+    $(window).on("scroll",function() {
+      scroll()
+    });
+  }
+</script>
 
     <!-- 劇照 swiper & 提案人 info -->
     <section
